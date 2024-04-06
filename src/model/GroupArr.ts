@@ -16,7 +16,7 @@ const GroupArr: AccordionModel[] = [
     extraSpace: true,
   },
   {
-    title: "Rangmanch",
+    title: "Rang Manch",
     subtitle: "Theme dance",
     imageUrl: "./rangmanch.png",
     limit: "8-10",

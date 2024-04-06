@@ -19,10 +19,11 @@ const Wrapper = styled.section`
   display: flex;
 
   @media (max-width: 768px) {
-    width: 100vw;
+    width: 200vw;
     height: 120vh;
     background-size: fill;
     background-position: left;
+    margin-left: -10rem;
   }
 `;
 
@@ -61,7 +62,7 @@ const Logo = styled.img`
   height: auto;
 
   @media (max-width: 768px) {
-    width: 80vw;
+    width: 90vw;
   }
 `;
 
@@ -69,6 +70,11 @@ const ButtonGroup = styled.div`
   display: flex;
   justify-content: right;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+    justify-content: center;
+  }
 `;
 const ButtonWrapper = styled.div<{ $primary?: boolean }>`
   border-radius: 2rem;
@@ -79,6 +85,10 @@ const ButtonWrapper = styled.div<{ $primary?: boolean }>`
   background-image: ${(props) =>
     props.$primary ? "#000" : "linear-gradient(90deg, #cbaa00, #fff)"};
   transition: all 0.3s;
+
+  @media (max-width: 768px) {
+    scale: 0.7;
+  }
 
   &:hover {
     background-color: ${(props) => (props.$primary ? "#fff" : " #cbaa00")};
@@ -106,7 +116,7 @@ const Button = styled.button<{ $primary?: boolean }>`
 
 const Hero = () => {
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <TopNav>
         <IoMdMenu fill="#FFFFFF" size={30} />
         <NavLine />

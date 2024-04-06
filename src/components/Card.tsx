@@ -12,8 +12,9 @@ const Wrapper = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    width: 80vw;
-    height: 800px;
+    width: 100vw;
+    height: 400px;
+    padding-left: 3rem;
   }
 `;
 
@@ -31,8 +32,9 @@ const Container = styled.div`
   padding-bottom: 1rem;
 
   @media (max-width: 768px) {
-    width: 350px;
-    height: 600px;
+    width: 60vw;
+    height: 250px;
+    padding-right: 3rem;
   }
 `;
 
@@ -46,6 +48,13 @@ const Title = styled.div`
   font-weight: 700;
   line-height: 72px;
   text-transform: capitalize;
+
+  @media (max-width: 768px) {
+    width: 200px;
+    word-spacing: 180px;
+    position: relative;
+    top: 0;
+  }
 `;
 
 const SubTitle = styled.div`
@@ -55,6 +64,12 @@ const SubTitle = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: 45px;
+
+  @media (max-width: 768px) {
+    width: 180px;
+    line-height: 30px;
+    word-wrap: break-word;
+  }
 `;
 
 const Info = styled.div`
@@ -84,6 +99,12 @@ const Image = styled.div<{ src: string }>`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    right: 10px;
+    width: 250px;
+    height: 250px;
+  }
 `;
 
 const Card: React.FC<{ model: AccordionModel }> = ({ model }) => {

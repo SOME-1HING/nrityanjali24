@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Accordion from "../Accordion";
 import SoloArr from "../../model/SoloArr";
+import AccordionModel from "../../model/AccordionModel";
+import Card from "../Card";
 
 const Wrapper = styled.section`
   width: 100vw;
@@ -41,6 +43,10 @@ const Container = styled.div`
   justify-content: start;
 
   gap: 4rem;
+
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 const Diamond = styled.img`
@@ -52,6 +58,22 @@ const AccordionWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MobileAccordionWrapper = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 `;
 const Solo = () => {
   return (
@@ -69,11 +91,16 @@ const Solo = () => {
           ></path>
         </svg>
       </Vector>
-      <Container>
+      <Container id="solo">
         <Diamond src="./diamond.png" />
         <AccordionWrapper>
           <Accordion arr={SoloArr} />
         </AccordionWrapper>
+        <MobileAccordionWrapper>
+          {SoloArr.map((item: AccordionModel) => (
+            <Card model={item} />
+          ))}
+        </MobileAccordionWrapper>
       </Container>
     </Wrapper>
   );

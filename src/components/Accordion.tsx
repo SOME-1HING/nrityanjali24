@@ -1,4 +1,4 @@
-import styled from "styled-components";
+  import styled from "styled-components";
 import Card from "./Card";
 import AccordionModel from "../model/AccordionModel";
 

@@ -43,6 +43,7 @@ const Title = styled.div`
   gap: 1rem;
   @media (max-width: 768px) {
     text-align: center;
+    width: 100vw;
   }
 `;
 
@@ -139,7 +140,7 @@ const Monitor = styled.img``;
 
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Container>
         <Header>
           <Title>

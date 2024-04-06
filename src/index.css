@@ -5,9 +5,19 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  scrollbar-color: #cbaa00 #7c7c7c;
+  scrollbar-color: #cbaa00 rgb(0, 0, 0, 0.65);
 }
 
 html {
   background-color: black;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
 }

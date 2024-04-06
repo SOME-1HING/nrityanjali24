@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Accordion from "../Accordion";
 import GroupArr from "../../model/GroupArr";
+import AccordionModel from "../../model/AccordionModel";
+import Card from "../Card";
 
 const Wrapper = styled.section`
   width: 100vw;
@@ -42,16 +44,40 @@ const Container = styled.div`
   justify-content: end;
 
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 const Diamond = styled.img`
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 const AccordionWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MobileAccordionWrapper = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 `;
 const Group = () => {
   return (
@@ -69,10 +95,15 @@ const Group = () => {
           ></path>
         </svg>
       </Vector>
-      <Container>
+      <Container id="group">
         <AccordionWrapper>
           <Accordion arr={GroupArr} />
         </AccordionWrapper>
+        <MobileAccordionWrapper>
+          {GroupArr.map((item: AccordionModel) => (
+            <Card model={item} />
+          ))}
+        </MobileAccordionWrapper>
         <Diamond src="./diamond.png" />
       </Container>
     </Wrapper>

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import MobileContact from "../MobileContact";
+import Form from "../Form";
 
 const Wrapper = styled.section`
   width: 100vw;
@@ -15,6 +17,10 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   gap: 10rem;
+
+  @media (max-width: 768px) {
+    height: 320vh;
+  }
 `;
 
 const Container = styled.div`
@@ -29,6 +35,14 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 20rem;
+    height: 100vh;
+    background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 1) 90%),
+      url("./hand.png");
+    background-position: center;
+  }
 `;
 
 const JoinUs = styled.div`
@@ -40,18 +54,36 @@ const JoinUs = styled.div`
   line-height: normal;
   letter-spacing: 17.838px;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 1rem;
+  }
 `;
 
 const ContactSection = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   margin-top: -15rem;
-  background: linear-gradient(to bottom, #000000, rgba(91, 71, 5, 1) 100%);
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    rgba(91, 71, 5, 1) 80%,
+    rgba(91, 71, 5, 0.8) 100%
+  );
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: 200vh;
+  }
 `;
 
 const Contact = styled.div`
@@ -63,21 +95,36 @@ const Contact = styled.div`
   line-height: normal;
   letter-spacing: 3.251px;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 `;
 const ContactContainer = styled.div`
+  width: 80vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: start;
+  gap: 4rem;
   padding-top: 5rem;
-  padding-bottom: 1rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ContactLeft = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+
   gap: 2rem;
   width: 100%;
   height: 100%;
@@ -86,6 +133,10 @@ const BoxWrapper = styled.div`
   display: flex;
 
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const Box = styled.div`
   width: 200px;
@@ -134,12 +185,14 @@ const ContactRight = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 `;
 
 const ContactForm = styled.div`
+  width: 100%;
+  height: 350px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -184,7 +237,7 @@ const Join = () => {
         <Container>
           <JoinUs>Join Us</JoinUs>
         </Container>
-        <ContactSection>
+        <ContactSection id="contact">
           <Contact>Contact</Contact>
           <ContactContainer>
             <ContactLeft>
@@ -217,7 +270,9 @@ const Join = () => {
               ></Map>
             </ContactLeft>
             <ContactRight>
-              <ContactForm>fersge</ContactForm>
+              <ContactForm>
+                <Form />
+              </ContactForm>
               <Address>
                 <AddressTitle>ADDRESS</AddressTitle>
                 <AddressContent>
@@ -227,15 +282,9 @@ const Join = () => {
               </Address>
             </ContactRight>
           </ContactContainer>
+          <MobileContact />
         </ContactSection>
       </Wrapper>
-      <div
-        style={{
-          background: "rgba(91, 71, 5, 1)",
-          width: "100vw",
-          height: "50px",
-        }}
-      ></div>
     </>
   );
 };

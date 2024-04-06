@@ -18,7 +18,7 @@ const Wrapper = styled.section`
 `;
 
 const PlaceHolder = () => {
-  return <Wrapper></Wrapper>;
+  return <Wrapper id="schedule"></Wrapper>;
 };
 
 export default PlaceHolder;
