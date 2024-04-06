@@ -56,7 +56,7 @@ const Diamond = styled.img`
 `;
 const AccordionWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
 
   @media (max-width: 768px) {

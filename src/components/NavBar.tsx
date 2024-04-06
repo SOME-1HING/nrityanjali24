@@ -10,10 +10,7 @@ const Wrapper = styled.div<{ scrolled: boolean }>`
   align-items: center;
   position: fixed;
   z-index: 100;
-  background: ${(props) =>
-    props.scrolled
-      ? "linear-gradient(to bottom, rgba(203, 170, 0, 1) 0%, rgba(203, 169, 0, 0.4) 100%)"
-      : "transparent"};
+  background: ${(props) => (props.scrolled ? "#cbaa00" : "transparent")};
   transition: all 0.5s;
 
   @media (max-width: 768px) {
