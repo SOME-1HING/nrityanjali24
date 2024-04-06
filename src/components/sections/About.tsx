@@ -136,7 +136,20 @@ const PromoWrapper = styled.div`
   }
 `;
 
-const Monitor = styled.img``;
+const PromoBorder = styled.div`
+  width: 60vw;
+  height: 70vh;
+  border: 1px solid #cbaa00;
+  border-radius: 10px;
+  padding: 1rem;
+  overflow: hidden;
+`;
+
+const Promo = styled.video`
+  * {
+    cursor: none;
+  }
+`;
 
 const About = () => {
   return (
@@ -167,7 +180,9 @@ const About = () => {
       </Container>
 
       <PromoWrapper>
-        <Monitor src="./monitor.png" />
+        <PromoBorder>
+          <Promo width="100%" height="100%" controls src="./video.mp4" />
+        </PromoBorder>
       </PromoWrapper>
     </Wrapper>
   );

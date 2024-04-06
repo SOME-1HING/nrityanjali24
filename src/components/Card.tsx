@@ -1,6 +1,7 @@
-import { IoPeopleSharp } from "react-icons/io5";
+import { IoPeopleSharp, IoPersonSharp } from "react-icons/io5";
 import styled from "styled-components";
 import AccordionModel from "../model/AccordionModel";
+import { MdGroups } from "react-icons/md";
 
 const Wrapper = styled.div`
   width: 475px;
@@ -73,11 +74,12 @@ const SubTitle = styled.div`
 `;
 
 const Info = styled.div`
-  width: 100px;
+  width: 120px;
   height: 50px;
   display: flex;
   gap: 1rem;
   align-items: center;
+  overflow: hidden;
 `;
 const InfoText = styled.div`
   color: #c0bfc4;
@@ -114,7 +116,13 @@ const Card: React.FC<{ model: AccordionModel }> = ({ model }) => {
         <Title>{model.title}</Title>
         <SubTitle>{model.subtitle}</SubTitle>
         <Info>
-          <IoPeopleSharp fill="rgba(192, 191, 196, 0.6)" size={30} />
+          {model.limit === "1" ? (
+            <IoPersonSharp fill="rgba(192, 191, 196, 0.6)" size={30} />
+          ) : model.limit === "2" ? (
+            <IoPeopleSharp fill="rgba(192, 191, 196, 0.6)" size={30} />
+          ) : (
+            <MdGroups fill="rgba(192, 191, 196, 0.6)" size={30} />
+          )}
           <InfoText>{model.limit}</InfoText>
         </Info>
       </Container>

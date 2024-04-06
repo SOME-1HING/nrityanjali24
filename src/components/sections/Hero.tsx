@@ -1,4 +1,3 @@
-import { IoMdHome, IoMdMenu } from "react-icons/io";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
@@ -7,12 +6,19 @@ const Wrapper = styled.section`
   background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.85) 20%,
+
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("./backdrop.png");
+  /*   background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.85) 20%,
       rgba(61, 61, 61, 0.75),
       rgba(0, 0, 0, 0.85) 60%,
       rgba(0, 0, 0, 1) 80%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("./backdrop.png");
+    url("./backdrop.png"); */
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
@@ -25,29 +31,6 @@ const Wrapper = styled.section`
     background-position: left;
     margin-left: -10rem;
   }
-`;
-
-const TopNav = styled.div`
-  position: relative;
-  top: 0;
-  right: 0;
-  display: flex;
-  width: 100vw;
-  justify-content: space-between;
-  align-items: start;
-  padding: 3rem 6rem;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const NavLine = styled.div`
-  width: 65vw;
-  height: 15px;
-  background-color: #cbaa00;
-  border-radius: 10px;
-  border: 1.5px solid #fff;
 `;
 
 const Center = styled.div`
@@ -102,7 +85,6 @@ const Button = styled.button<{ $primary?: boolean }>`
   color: #fff;
   font-family: "Oswald", sans-serif;
   font-size: 1.25rem;
-  cursor: pointer;
   transition: all 0.3s;
   text-transform: uppercase;
   border-radius: 2rem;
@@ -117,20 +99,19 @@ const Button = styled.button<{ $primary?: boolean }>`
 const Hero = () => {
   return (
     <Wrapper id="home">
-      <TopNav>
-        <IoMdMenu fill="#FFFFFF" size={30} />
-        <NavLine />
-        <IoMdHome fill="#FFFFFF" size={30} />
-      </TopNav>
       <Center>
         <Logo src="./logo.png" />
         <ButtonGroup>
-          <ButtonWrapper $primary={true}>
-            <Button $primary={true}>Register</Button>
-          </ButtonWrapper>
-          <ButtonWrapper>
-            <Button>Brochure</Button>
-          </ButtonWrapper>
+          <a href="" className="pointer">
+            <ButtonWrapper $primary={true}>
+              <Button $primary={true}>Register</Button>
+            </ButtonWrapper>
+          </a>
+          <a href="" className="pointer">
+            <ButtonWrapper>
+              <Button>Brochure</Button>
+            </ButtonWrapper>
+          </a>
         </ButtonGroup>
       </Center>
     </Wrapper>

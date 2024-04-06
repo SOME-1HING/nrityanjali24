@@ -5,10 +5,20 @@ import Contact from "./components/sections/Contact";
 import PlaceHolder from "./components/sections/Placeholder";
 import Solo from "./components/sections/Solo";
 import Footer from "./components/sections/Footer";
+import NavBar from "./components/NavBar";
+import styled from "styled-components";
+import CustomCursor from "./components/CustomCursor";
+
+const Wrapper = styled.div`
+  margin: 0;
+  padding: 0;
+`;
 
 function App() {
   return (
-    <>
+    <Wrapper>
+      <CustomCursor />
+      <NavBar />
       <Hero />
       <About />
       <Solo />
@@ -16,7 +26,7 @@ function App() {
       <Group />
       <Contact />
       <Footer />
-    </>
+    </Wrapper>
   );
 }
 

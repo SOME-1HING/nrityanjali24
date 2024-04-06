@@ -57,7 +57,6 @@ const ListItem = styled.li`
   color: #ffffff;
   opacity: 0.6;
   text-decoration: none;
-  cursor: pointer;
   &:hover {
     opacity: 1;
   }
@@ -89,28 +88,28 @@ const Footer = () => {
         <Links>
           <Title>Links</Title>
           <ul>
-            <a href="#home">
+            <a className="pointer" href="#home">
               <ListItem>home</ListItem>
             </a>
-            <a href="#about">
+            <a className="pointer" href="#about">
               <ListItem>about</ListItem>
             </a>
-            <a href="#solo">
+            <a className="pointer" href="#solo">
               <ListItem>Solo Events</ListItem>
             </a>
-            <a href="#schedule">
+            <a className="pointer" href="#schedule">
               <ListItem>schedule</ListItem>
             </a>
-            <a href="#group">
+            <a className="pointer" href="#group">
               <ListItem>group events</ListItem>
             </a>
-            <a href="#contact">
+            <a className="pointer" href="#contact">
               <ListItem>contact</ListItem>
             </a>
-            <a href="" target="_blank">
+            <a className="pointer" href="" target="_blank">
               <ListItem>register</ListItem>
             </a>
-            <a href="" target="_blank">
+            <a className="pointer" href="" target="_blank">
               <ListItem>brochure</ListItem>
             </a>
           </ul>
@@ -119,28 +118,36 @@ const Footer = () => {
         <div className="footer-about footer-common">
           <Title>About</Title>
           <ul>
-            <a href="https://kristujayanti.edu.in/" target="_blank">
+            <a
+              className="pointer"
+              href="https://kristujayanti.edu.in/"
+              target="_blank"
+            >
               <ListItem>kristu jayanti college</ListItem>
             </a>
             <a
+              className="pointer"
               href="https://kristujayanti.edu.in/about/founder.php"
               target="_blank"
             >
               <ListItem>founder</ListItem>
             </a>
             <a
+              className="pointer"
               href="https://kristujayanti.edu.in/about/history.php"
               target="_blank"
             >
               <ListItem>history</ListItem>
             </a>
             <a
+              className="pointer"
               href="https://kristujayanti.edu.in/about/vision_mission_goals.php"
               target="_blank"
             >
               <ListItem>vision, mission, goals</ListItem>
             </a>
             <a
+              className="pointer"
               href="https://kristujayanti.edu.in/studentlife/literary_cultural_academy.php"
               target="_blank"
             >
@@ -152,10 +159,10 @@ const Footer = () => {
         <div className="contact footer-common">
           <Title>Contact</Title>
           <ul>
-            <a href="tel:	080-28465611">
+            <a className="pointer" href="tel:	080-28465611">
               <ListItem>080-28465611</ListItem>
             </a>
-            <a href="mailto:_____@kristujayanti.com">
+            <a className="pointer" href="mailto:_____@kristujayanti.com">
               <ListItem className="e-mail-link">
                 ____@kristujayanti.com
               </ListItem>

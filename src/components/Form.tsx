@@ -95,14 +95,14 @@ const Form = () => {
         <NameEmailContainer>
           <InputBox
             type="text"
-            className="no-outline"
+            className="pointer"
             placeholder="Name"
             required={true}
             name="Name"
           />
           <InputBox
             type="email"
-            className="no-outline"
+            className="pointer"
             placeholder="Email"
             required={true}
             name="email"
@@ -111,12 +111,12 @@ const Form = () => {
         <InputBox
           id="subject"
           type="text"
-          className="no-outline"
+          className="pointer"
           required={true}
           placeholder="Subject"
         />
         <TextArea
-          className="no-outline"
+          className="pointer"
           placeholder="Have a message for us ?"
           required={true}
           data-lt-tmp-id="lt-945523"
@@ -124,7 +124,7 @@ const Form = () => {
           data-gramm={false}
         ></TextArea>
         <ButtonWrapper>
-          <Button id="submit" type="submit" value="">
+          <Button id="submit" type="submit" value="" className="pointer">
             Send <IoIosSend />
           </Button>
         </ButtonWrapper>
