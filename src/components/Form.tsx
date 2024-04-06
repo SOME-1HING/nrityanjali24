@@ -1,3 +1,4 @@
+import { IoIosSend } from "react-icons/io";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -65,17 +66,21 @@ const ButtonWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  width: 6rem;
+  width: 7rem;
   height: 2.5rem;
   background-color: #cbaa00;
   color: #fff;
-  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
   cursor: pointer;
   transition: all 0.3s;
   text-transform: uppercase;
   border-radius: 2rem;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 
   &:hover {
     background-color: #fff;
@@ -120,7 +125,7 @@ const Form = () => {
         ></TextArea>
         <ButtonWrapper>
           <Button id="submit" type="submit" value="">
-            Send
+            Send <IoIosSend />
           </Button>
         </ButtonWrapper>
       </form>
