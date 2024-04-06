@@ -9,9 +9,9 @@ const SoloArr: AccordionModel[] = [
     extraSpace: false,
   },
   {
-    title: "Agnika",
+    title: "Angika",
     subtitle: "Classical solo dance",
-    imageUrl: "./agnika.png",
+    imageUrl: "./angika.png",
     limit: "1",
     extraSpace: false,
   },

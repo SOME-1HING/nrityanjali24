@@ -45,7 +45,10 @@ const Container = styled.div`
 
   gap: 2rem;
 
+  padding-left: 5rem;
+
   @media (max-width: 768px) {
+    padding-left: 0;
     height: 100%;
   }
 `;

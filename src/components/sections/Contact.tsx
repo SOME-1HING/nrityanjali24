@@ -178,6 +178,11 @@ const Map = styled.iframe`
   width: 500px;
   border: 0;
   border-radius: 1rem;
+  height: 200px;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 300px;
+  }
 `;
 
 const ContactRight = styled.div`
