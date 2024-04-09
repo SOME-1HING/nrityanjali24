@@ -18,8 +18,17 @@ const Wrapper = styled.section`
   align-items: center;
   gap: 10rem;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     height: 320vh;
+  }
+
+  @media (max-device-height: 768px) {
+    height: 350vh;
+  }
+
+  @media screen and (max-height: 500px) {
+    min-height: 747vh;
+    overflow-y: hidden;
   }
 `;
 
@@ -36,12 +45,16 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     margin-top: 20rem;
     height: 100vh;
     background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 1) 90%),
       url("./hand.png");
     background-position: center;
+  }
+
+  @media screen and (max-height: 400px) {
+    min-height: 100vh;
   }
 `;
 
@@ -55,13 +68,21 @@ const JoinUs = styled.div`
   letter-spacing: 17.838px;
   text-transform: uppercase;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-left: 1rem;
+  }
+
+  @media (max-device-width: 400px) {
+    font-size: 100px;
+  }
+
+  @media screen and (max-height: 400px) {
+    font-size: 50px;
   }
 `;
 
@@ -81,8 +102,16 @@ const ContactSection = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     height: 200vh;
+  }
+
+  @media (max-device-height: 768px) {
+    height: 250vh;
+  }
+  @media screen and (max-height: 400px) {
+    margin-top: -10rem;
+    min-height: 550vh;
   }
 `;
 
@@ -95,13 +124,18 @@ const Contact = styled.div`
   line-height: normal;
   letter-spacing: 3.251px;
   text-transform: uppercase;
+  overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  @media screen and (max-height: 400px) {
+    min-height: 30px;
   }
 `;
 const ContactContainer = styled.div`
@@ -114,7 +148,7 @@ const ContactContainer = styled.div`
   padding-left: 5rem;
   padding-right: 5rem;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: none;
   }
 `;
@@ -134,7 +168,7 @@ const BoxWrapper = styled.div`
 
   gap: 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -179,7 +213,7 @@ const Map = styled.iframe`
   border: 0;
   border-radius: 1rem;
   height: 200px;
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 100%;
     height: 300px;
   }

@@ -2,7 +2,7 @@ import { IoMdHome, IoMdMenu } from "react-icons/io";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 
-const Wrapper = styled.div<{ scrolled: boolean }>`
+const Wrapper = styled.div<{ scrolled: string }>`
   width: 100%;
   height: 10vh;
   display: flex;
@@ -10,10 +10,11 @@ const Wrapper = styled.div<{ scrolled: boolean }>`
   align-items: center;
   position: fixed;
   z-index: 100;
-  background: ${(props) => (props.scrolled ? "#cbaa00" : "transparent")};
+  background: ${(props) =>
+    props.scrolled == "true" ? "#cbaa00" : "transparent"};
   transition: all 0.5s;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: none;
   }
 `;
@@ -25,24 +26,24 @@ const TopNav = styled.div`
   align-items: center;
 `;
 
-const NavLine = styled.div<{ scrolled: boolean }>`
+const NavLine = styled.div<{ scrolled: string }>`
   width: 65vw;
   height: 15px;
   background-color: #cbaa00;
   border-radius: 10px;
   border: 1.5px solid #fff;
-  display: ${(props) => (!props.scrolled ? "block" : "none")};
+  display: ${(props) => (props.scrolled == "false" ? "block" : "none")};
 `;
 
 const NavBar = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState("false");
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setScrolled(true);
+        setScrolled("true");
       } else {
-        setScrolled(false);
+        setScrolled("false");
       }
     };
 

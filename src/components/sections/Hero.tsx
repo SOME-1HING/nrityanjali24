@@ -24,12 +24,21 @@ const Wrapper = styled.section`
   background-repeat: no-repeat;
   display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 200vw;
     height: 120vh;
+
     background-size: fill;
     background-position: left;
     margin-left: -10rem;
+  }
+
+  @media (max-device-height: 768px) {
+    height: 150vh;
+  }
+
+  @media (max-height: 400px) {
+    height: 160vh;
   }
 `;
 
@@ -44,7 +53,7 @@ const Logo = styled.img`
   width: 60vw;
   height: auto;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 90vw;
   }
 `;
@@ -54,7 +63,7 @@ const ButtonGroup = styled.div`
   justify-content: right;
   gap: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     gap: 0.5rem;
     justify-content: center;
   }
@@ -69,7 +78,7 @@ const ButtonWrapper = styled.div<{ $primary?: boolean }>`
     props.$primary ? "#000" : "linear-gradient(90deg, #cbaa00, #fff)"};
   transition: all 0.3s;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     scale: 0.7;
   }
 

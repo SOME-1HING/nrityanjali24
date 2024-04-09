@@ -6,7 +6,6 @@
   -ms-user-select: none;
   user-select: none;
   scrollbar-color: #cbaa00 rgb(0, 0, 0, 0.65);
-  cursor: none !important;
 }
 
 html {
@@ -21,5 +20,4 @@ button:focus {
 
 a {
   text-decoration: none;
-  cursor: none !important;
 }

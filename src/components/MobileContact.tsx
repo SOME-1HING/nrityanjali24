@@ -1,15 +1,19 @@
 import styled from "styled-components";
 import Form from "./Form";
-
 const ContactContainer = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 2rem;
     padding-top: 5rem;
+    overflow-y: hidden;
+  }
+
+  @media (max-height: 500px) {
+    min-height: 500vh;
   }
 `;
 
@@ -53,12 +57,20 @@ const ContactForm = styled.div`
   width: 100%;
   height: 350px;
   scale: 0.9;
+
+  @media (max-device-width: 768px) {
+    height: 400px;
+  }
 `;
 
 const Map = styled.iframe`
   width: 100vw;
   border: 0;
   height: 300px;
+
+  @media (max-height: 400px) {
+    height: 300px;
+  }
 `;
 
 const MobileContact = () => {

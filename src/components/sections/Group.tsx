@@ -3,6 +3,7 @@ import Accordion from "../Accordion";
 import GroupArr from "../../model/GroupArr";
 import AccordionModel from "../../model/AccordionModel";
 import Card from "../Card";
+import { uid } from "uid";
 
 const Wrapper = styled.section`
   width: 100vw;
@@ -47,7 +48,7 @@ const Container = styled.div`
 
   padding-left: 5rem;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     padding-left: 0;
     height: 100%;
   }
@@ -57,7 +58,7 @@ const Diamond = styled.img`
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: none;
   }
 `;
@@ -66,14 +67,14 @@ const AccordionWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: none;
   }
 `;
 
 const MobileAccordionWrapper = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -104,7 +105,7 @@ const Group = () => {
         </AccordionWrapper>
         <MobileAccordionWrapper>
           {GroupArr.map((item: AccordionModel) => (
-            <Card model={item} />
+            <Card model={item} key={uid()} />
           ))}
         </MobileAccordionWrapper>
         <Diamond src="./diamond.png" />

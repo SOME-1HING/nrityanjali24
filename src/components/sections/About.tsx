@@ -9,7 +9,7 @@ const Wrapper = styled.section`
   gap: 10rem;
   margin-top: -8rem;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     margin-top: -16rem;
     margin-bottom: 2rem;
   }
@@ -22,7 +22,7 @@ const Container = styled.div`
   margin-left: 5rem;
   margin-right: 5rem;
   gap: 2rem;
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -41,7 +41,7 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     text-align: center;
     width: 100vw;
   }
@@ -58,7 +58,7 @@ const TitleAbout = styled.div`
   letter-spacing: 12.897px;
   text-transform: uppercase;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     font-size: 48px;
     -webkit-text-stroke-width: 1px;
     letter-spacing: 12.897px;
@@ -76,7 +76,7 @@ const TitleUs = styled.div`
   letter-spacing: 12.897px;
   text-transform: uppercase;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     font-size: 48px;
     letter-spacing: 12.897px;
     text-align: center;
@@ -88,7 +88,7 @@ const TitleLine = styled.div`
   height: 2px;
   background-color: #fff;
   border-radius: 10px;
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: none;
   }
 `;
@@ -107,7 +107,7 @@ const ContentLine = styled.div`
   border-radius: 10px;
   border: 1.5px solid #fff;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: none;
   }
 `;
@@ -121,7 +121,7 @@ const Content = styled.div`
   text-align: justify;
   font-size: 27.972px;
   line-height: normal;
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     font-size: 16px;
   }
 `;
@@ -131,7 +131,7 @@ const PromoWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: none;
   }
 `;

@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 100vw;
     height: 400px;
     padding-left: 3rem;
@@ -32,7 +32,7 @@ const Container = styled.div`
   padding-left: 1rem;
   padding-bottom: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 60vw;
     height: 250px;
     padding-right: 3rem;
@@ -50,7 +50,7 @@ const Title = styled.div`
   line-height: 72px;
   text-transform: capitalize;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 200px;
     word-spacing: 180px;
     position: relative;
@@ -66,7 +66,7 @@ const SubTitle = styled.div`
   font-weight: 600;
   line-height: 45px;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 180px;
     line-height: 30px;
     word-wrap: break-word;
@@ -91,9 +91,9 @@ const InfoText = styled.div`
   text-transform: capitalize;
 `;
 
-const Image = styled.div<{ src: string }>`
+const Image = styled.div<{ src: string; title: string }>`
   position: absolute;
-  top: 100;
+  top: 100px;
   right: -50px;
   width: 300px;
   height: 300px;
@@ -102,10 +102,39 @@ const Image = styled.div<{ src: string }>`
   background-position: center;
   background-repeat: no-repeat;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     right: 10px;
     width: 250px;
     height: 250px;
+    top: inherit;
+  }
+
+  @media (max-device-width: 425px) {
+    right: 0px;
+    background-position: bottom left;
+    width: ${(props) => (props.title === "Taal Tarang" ? "200px" : "250px")};
+    height: ${(props) => (props.title === "Taal Tarang" ? "200px" : "250px")};
+
+    ${(props) => (props.title === "Taal Tarang" ? "padding-right:80px;" : "")};
+  }
+
+  @media (max-device-width: 400px) {
+    right: 0px;
+    background-position: bottom left;
+    width: ${(props) =>
+      props.title === "Taal Tarang"
+        ? "200px"
+        : props.title === "Footloose"
+        ? "200px"
+        : "250px"};
+    height: ${(props) =>
+      props.title === "Taal Tarang"
+        ? "200px"
+        : props.title === "Footloose"
+        ? "200px"
+        : "250px"};
+
+    ${(props) => (props.title === "Taal Tarang" ? "padding-right:20px;" : "")};
   }
 `;
 
@@ -128,7 +157,10 @@ const Card: React.FC<{ model: AccordionModel }> = ({ model }) => {
       </Container>
       <Image
         src={model.imageUrl}
-        style={{ right: model.extraSpace ? "-5px" : "-50px" }}
+        title={model.title}
+        style={{
+          right: model.extraSpace ? "-5px" : "-50px",
+        }}
       />
     </Wrapper>
   );

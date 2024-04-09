@@ -3,6 +3,7 @@ import Accordion from "../Accordion";
 import SoloArr from "../../model/SoloArr";
 import AccordionModel from "../../model/AccordionModel";
 import Card from "../Card";
+import { uid } from "uid";
 
 const Wrapper = styled.section`
   width: 100vw;
@@ -44,13 +45,13 @@ const Container = styled.div`
 
   gap: 4rem;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     height: 100%;
   }
 `;
 
 const Diamond = styled.img`
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: none;
   }
 `;
@@ -59,14 +60,14 @@ const AccordionWrapper = styled.div`
   align-items: end;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     display: none;
   }
 `;
 
 const MobileAccordionWrapper = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media only screen and (max-device-width: 768px) {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -98,7 +99,7 @@ const Solo = () => {
         </AccordionWrapper>
         <MobileAccordionWrapper>
           {SoloArr.map((item: AccordionModel) => (
-            <Card model={item} />
+            <Card model={item} key={uid()} />
           ))}
         </MobileAccordionWrapper>
       </Container>

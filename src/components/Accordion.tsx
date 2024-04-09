@@ -1,6 +1,7 @@
-  import styled from "styled-components";
+import styled from "styled-components";
 import Card from "./Card";
 import AccordionModel from "../model/AccordionModel";
+import { uid } from "uid";
 
 const Wrapper = styled.ul`
   width: 1080px;
@@ -12,7 +13,7 @@ const Wrapper = styled.ul`
   flex-grow: initial;
   gap: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 100vw;
     align-items: center;
     justify-content: center;
@@ -34,14 +35,14 @@ const Tabs = styled.li`
   border-radius: 16px;
   transition: all 0.7s ease-in-out;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     width: 80vw;
 
     background-color: transparent;
   }
   .content {
     display: none;
-    @media (max-width: 768px) {
+    @media (max-device-width: 768px) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -60,7 +61,7 @@ const Tabs = styled.li`
     text-orientation: sideways-right;
     transform: rotate(180deg);
 
-    @media (max-width: 768px) {
+    @media (max-device-width: 768px) {
       display: none;
     }
   }
@@ -69,7 +70,7 @@ const Tabs = styled.li`
     width: 450px;
     background-color: transparent;
 
-    @media (max-width: 768px) {
+    @media (max-device-width: 768px) {
       background-color: transparent;
     }
 
@@ -108,10 +109,10 @@ const Accordion: React.FC<{ arr: Array<AccordionModel> }> = ({ arr }) => {
   return (
     <Wrapper className="accordion">
       {arr.map((item: AccordionModel) => (
-        <Tabs className="tabs">
+        <Tabs className="tabs" key={uid()}>
           <h1>{item.title}</h1>
           <div className="content">
-            <Card model={item} />
+            <Card model={item} key={uid()} />
           </div>
         </Tabs>
       ))}

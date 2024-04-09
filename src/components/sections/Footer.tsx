@@ -23,7 +23,7 @@ const Wrapper = styled.section`
   padding-top: 30px;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     flex-direction: column;
     height: 100vh;
     padding-top: 0;
@@ -31,6 +31,10 @@ const Wrapper = styled.section`
     justify-content: space-around;
     gap: 2rem;
     padding-bottom: 2rem;
+  }
+
+  @media (max-height: 400px) {
+    height: 800px;
   }
 `;
 
@@ -45,7 +49,7 @@ const Title = styled.h3`
   font-size: 1.3rem;
   user-select: none;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     text-align: center;
   }
 `;
@@ -61,7 +65,7 @@ const ListItem = styled.li`
     opacity: 1;
   }
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     text-align: center;
   }
 `;
@@ -75,7 +79,7 @@ const CopyRight = styled.h4`
   position: absolute;
   bottom: 0px;
 
-  @media (max-width: 768px) {
+  @media (max-device-width: 768px) {
     padding-top: 1rem;
     padding-bottom: 0.5rem;
   }
