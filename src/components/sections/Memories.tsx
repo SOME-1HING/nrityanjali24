@@ -31,6 +31,7 @@ const ReelWrapper = styled.div`
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  gap: 1rem;
 `;
 
 const Memories = () => {

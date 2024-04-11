@@ -38,7 +38,7 @@ const Wrapper = styled.section`
 
 const Solo = () => {
   return (
-    <Wrapper>
+    <Wrapper id="solo">
       <video
         style={{ width: "100%", height: "100%" }}
         autoPlay

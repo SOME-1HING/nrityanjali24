@@ -111,10 +111,11 @@ const RowContent = styled.div`
   line-height: 1.5;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 `;
 const Info = () => {
   return (
-    <Wrapper>
+    <Wrapper id="info">
       <BoxGroup>
         <Box>
           <BoxTitle style={{ fontSize: "3rem" }}>10 Events</BoxTitle>

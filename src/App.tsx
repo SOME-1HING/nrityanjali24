@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Carousel from "./components/Carousel";
+// import Carousel from "./components/Carousel";
 import Hero from "./components/sections/Hero.tsx";
 import Solo from "./components/sections/Solo";
 import SoloArr from "./model/SoloArr";
@@ -13,6 +13,10 @@ import Join from "./components/sections/Join.tsx";
 import Memories from "./components/sections/Memories.tsx";
 import Footer from "./components/sections/Footer.tsx";
 import Info from "./components/sections/Info.tsx";
+import NewCarousel from "./components/NewCarousel.tsx";
+import Nav from "./components/Nav.tsx";
+import About from "./components/sections/About.tsx";
+import Promo from "./components/sections/Promo.tsx";
 
 const Wrapper = styled.div`
   margin: 0;
@@ -27,12 +31,17 @@ function App() {
   return (
     <Wrapper>
       <GoToButton goto={goto} />
+      <Nav />
       <main ref={scrollRef}>
         <Hero />
+        <About />
+        <Promo />
         <Solo />
-        <Carousel modelArr={SoloArr} />
+        {/* <Carousel modelArr={SoloArr} /> */}
+        <NewCarousel modelArr={SoloArr} />
         <Group />
-        <Carousel modelArr={GroupArr} />
+        <NewCarousel modelArr={GroupArr} />
+        {/* <Carousel modelArr={GroupArr} /> */}
         <Info />
         <Memories />
         <Join />

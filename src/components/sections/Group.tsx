@@ -38,7 +38,7 @@ const Wrapper = styled.section`
 
 const Group = () => {
   return (
-    <Wrapper>
+    <Wrapper id="group">
       <video
         style={{ width: "100%", height: "100%" }}
         autoPlay

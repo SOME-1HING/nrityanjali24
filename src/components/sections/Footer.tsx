@@ -97,8 +97,8 @@ const Footer = () => {
             <a className="pointer" href="#solo">
               <ListItem>Solo Events</ListItem>
             </a>
-            <a className="pointer" href="#schedule">
-              <ListItem>schedule</ListItem>
+            <a className="pointer" href="#info">
+              <ListItem>info</ListItem>
             </a>
             <a className="pointer" href="#group">
               <ListItem>group events</ListItem>
@@ -106,10 +106,19 @@ const Footer = () => {
             <a className="pointer" href="#contact">
               <ListItem>contact</ListItem>
             </a>
-            <a className="pointer" href="" target="_blank">
+            <a
+              className="pointer"
+              href="https://portal.kristujayanti.edu.in/register-nrityanjali-2024"
+              target="_blank"
+            >
               <ListItem>register</ListItem>
             </a>
-            <a className="pointer" href="" target="_blank">
+            <a
+              className="pointer"
+              href="./Nrityanjali24_Brochure.pdf"
+              download="Nrityanjali24_Brochure.pdf"
+              target="_blank"
+            >
               <ListItem>brochure</ListItem>
             </a>
           </ul>

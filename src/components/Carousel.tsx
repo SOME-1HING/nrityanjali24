@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Card from "./Card";
 import { useState } from "react";
 import Arrow from "./Arrow";
@@ -15,94 +15,48 @@ const Wrapper = styled.section`
   scroll-snap-align: start;
 `;
 
-const slideLeft = keyframes`
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
-const slideRight = keyframes`
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
-const Left = styled.div<{ disabled: boolean }>`
+const Left = styled.div`
   scale: 0.5;
   transform: rotate(180deg);
   cursor: pointer;
-  animation: ${slideRight} 0.5s ease-in-out;
-  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
 `;
 
-const Right = styled.div<{ disabled: boolean }>`
+const Right = styled.div`
   scale: 0.5;
   cursor: pointer;
-  animation: ${slideLeft} 0.5s ease-in-out;
-  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
 `;
 
-const CardWrapper = styled.div<{ animationDirection: string }>`
-  animation: ${({ animationDirection }) =>
-      animationDirection === "left" ? slideLeft : slideRight}
-    0.5s ease-in-out forwards;
-`;
+const CardWrapper = styled.div``;
 
 const Carousel: React.FC<{ modelArr: AccordionModel[] }> = ({ modelArr }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animationDirection, setAnimationDirection] = useState("left");
-  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleLeftClick = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? modelArr.length - 1 : prevIndex - 1
     );
-    setAnimationDirection("right");
-    setTimeout(() => {
-      setIsAnimating(false);
-      setAnimationDirection("");
-    }, 500);
   };
 
   const handleRightClick = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
     setCurrentIndex((prevIndex) =>
       prevIndex === modelArr.length - 1 ? 0 : prevIndex + 1
     );
-    setAnimationDirection("left");
-    setTimeout(() => {
-      setIsAnimating(false);
-      setAnimationDirection("");
-    }, 500);
   };
 
   const renderCardWrapper = () => {
     return (
-      <CardWrapper animationDirection={animationDirection}>
+      <CardWrapper>
         <Card model={modelArr[currentIndex % modelArr.length]} />
       </CardWrapper>
     );
   };
   return (
     <Wrapper>
-      <Left disabled={isAnimating} onClick={handleLeftClick}>
+      <Left onClick={handleLeftClick}>
         <Arrow />
       </Left>
       {renderCardWrapper()}
-      <Right disabled={isAnimating} onClick={handleRightClick}>
+      <Right onClick={handleRightClick}>
         <Arrow />
       </Right>
     </Wrapper>

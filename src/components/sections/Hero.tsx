@@ -92,13 +92,16 @@ const Button = styled.button<{ $primary?: boolean }>`
 
 const Hero = () => {
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <Left>
         <Logo>
           <video src="./backdrop.mp4" muted loop autoPlay />
         </Logo>
         <ButtonGroup>
-          <a href="" target="_blank">
+          <a
+            href="https://portal.kristujayanti.edu.in/register-nrityanjali-2024"
+            target="_blank"
+          >
             <ButtonWrapper $primary={true}>
               <Button $primary={true}>Register</Button>
             </ButtonWrapper>

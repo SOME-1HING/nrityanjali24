@@ -20,8 +20,8 @@ const Arrow = () => {
           y2="99.2132"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#1C1631" />
-          <stop offset="1" stop-color="#3C2A89" />
+          <stop stopColor="#1C1631" />
+          <stop offset="1" stopColor="#3C2A89" />
         </linearGradient>
       </defs>
     </svg>

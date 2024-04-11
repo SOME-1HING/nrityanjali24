@@ -8,7 +8,7 @@ body {
 }
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   background-color: #000;
 
   @media screen and (max-width: 768px) {
