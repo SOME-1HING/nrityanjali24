@@ -5,9 +5,16 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f0f0f0;
 }
 
 html {
   scroll-snap-type: y mandatory;
+  background-color: #000;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }

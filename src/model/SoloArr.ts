@@ -23,9 +23,9 @@ const SoloArr: AccordionModel[] = [
     limit: "1",
   },
   {
-    title: "Mukthi",
+    title: "Beat Break",
     subtitle: "Western solo dance",
-    imageUrl: "./mukthi.png",
+    imageUrl: "./beatbreak.png",
     extraSpace: false,
     limit: "1",
   },

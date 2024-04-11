@@ -8,6 +8,8 @@ import Group from "./components/sections/Group";
 import { useRef } from "react";
 import useScrollSnap from "react-use-scroll-snap";
 import GoToButton from "./components/GoToButton";
+import Contact from "./components/sections/Contact.tsx";
+import Join from "./components/sections/Join.tsx";
 
 const Wrapper = styled.div`
   margin: 0;
@@ -28,6 +30,8 @@ function App() {
         <Carousel modelArr={SoloArr} />
         <Group />
         <Carousel modelArr={GroupArr} />
+        <Join />
+        <Contact />
       </main>
     </Wrapper>
   );
