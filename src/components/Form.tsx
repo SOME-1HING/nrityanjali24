@@ -68,7 +68,7 @@ const ButtonWrapper = styled.div`
 const Button = styled.button`
   width: 7rem;
   height: 2.5rem;
-  background-color: #cbaa00;
+  background-color: #9d02fc;
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;

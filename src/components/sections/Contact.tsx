@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import MobileContact from "../MobileContact";
 import Form from "../Form";
+import Coordinators from "../Coordinators";
 
 const Wrapper = styled.section`
   width: 100vw;
@@ -21,7 +22,7 @@ const Wrapper = styled.section`
 const ContactSection = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to bottom, #000000 26.24%, #9d02fc 133.84%);
+  background: linear-gradient(to bottom, #000000 26.24%, #9d02fc 100%);
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -64,45 +65,12 @@ const ContactLeft = styled.div`
 const BoxWrapper = styled.div`
   display: flex;
   gap: 2rem;
-`;
-const Box = styled.div`
-  width: 200px;
-  height: 150px;
-  border-radius: 14.525px;
-  padding: 1rem;
-  padding-top: 5rem;
-  display: flex;
-  text-align: center;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
-  overflow-x: hidden;
-  gap: 1rem;
-
-  color: #fff;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 13.547px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  font-variant: small-caps;
-  letter-spacing: 1.626px;
-`;
-
-const BoxTitle = styled.div`
-  color: #fff;
-  font-family: Roboto;
-  font-size: 16.01px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  font-variant: small-caps;
-  letter-spacing: 1.921px;
+  width: 100%;
+  height: 50%;
 `;
 
 const Map = styled.iframe`
-  width: 500px;
+  width: 600px;
   border: 0;
   border-radius: 1rem;
   height: 200px;
@@ -167,24 +135,7 @@ const Contact = () => {
           <ContactContainer>
             <ContactLeft>
               <BoxWrapper>
-                <Box
-                  style={{
-                    background:
-                      "linear-gradient(180deg, #C2A337 0%, #A1851F 100%)",
-                  }}
-                >
-                  <BoxTitle>STUDENT COORDINATOR</BoxTitle>
-                  Mr. Achsah Varghese: <br />
-                  ++454654654
-                  <br />
-                  Mr. Ajay Krishna S: <br /> +915448644
-                </Box>
-                <Box style={{ background: "#8C6F09" }}>
-                  <BoxTitle>FACULTY COORDINATOR</BoxTitle>
-                  Ms. Shilpa Rao
-                  <br />
-                  Mr. Don Caeiro
-                </Box>
+                <Coordinators />
               </BoxWrapper>
 
               <Map

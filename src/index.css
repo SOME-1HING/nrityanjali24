@@ -10,6 +10,10 @@ body {
 html {
   scroll-snap-type: y mandatory;
   background-color: #000;
+
+  @media screen and (max-width: 768px) {
+    scroll-snap-type: y none;
+  }
 }
 
 input:focus,
@@ -17,4 +21,8 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+}
+
+a {
+  text-decoration: none;
 }

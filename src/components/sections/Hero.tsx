@@ -103,7 +103,11 @@ const Hero = () => {
               <Button $primary={true}>Register</Button>
             </ButtonWrapper>
           </a>
-          <a href="" target="_blank">
+          <a
+            href="./Nrityanjali24_Brochure.pdf"
+            download="Nrityanjali24_Brochure.pdf"
+            target="_blank"
+          >
             <ButtonWrapper>
               <Button>Brochure</Button>
             </ButtonWrapper>

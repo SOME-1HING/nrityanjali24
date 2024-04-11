@@ -10,6 +10,9 @@ import useScrollSnap from "react-use-scroll-snap";
 import GoToButton from "./components/GoToButton";
 import Contact from "./components/sections/Contact.tsx";
 import Join from "./components/sections/Join.tsx";
+import Memories from "./components/sections/Memories.tsx";
+import Footer from "./components/sections/Footer.tsx";
+import Info from "./components/sections/Info.tsx";
 
 const Wrapper = styled.div`
   margin: 0;
@@ -30,8 +33,11 @@ function App() {
         <Carousel modelArr={SoloArr} />
         <Group />
         <Carousel modelArr={GroupArr} />
+        <Info />
+        <Memories />
         <Join />
         <Contact />
+        <Footer />
       </main>
     </Wrapper>
   );
