@@ -111,12 +111,21 @@ const Hero = () => {
       <Center>
         <Logo src="./logo.png" />
         <ButtonGroup>
-          <a href="" className="pointer">
+          <a
+            href="https://portal.kristujayanti.edu.in/register-nrityanjali-2024"
+            target="_blank"
+            className="pointer"
+          >
             <ButtonWrapper $primary={true}>
               <Button $primary={true}>Register</Button>
             </ButtonWrapper>
           </a>
-          <a href="" className="pointer">
+          <a
+            href="./Nrityanjali24_Brochure.pdf"
+            download="Nrityanjali24_Brochure.pdf"
+            target="_blank"
+            className="pointer"
+          >
             <ButtonWrapper>
               <Button>Brochure</Button>
             </ButtonWrapper>
