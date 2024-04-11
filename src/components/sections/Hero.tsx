@@ -98,6 +98,7 @@ const Button = styled.button<{ $primary?: boolean }>`
   text-transform: uppercase;
   border-radius: 2rem;
   border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: transparent;
