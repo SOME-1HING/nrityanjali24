@@ -1,23 +1,13 @@
 * {
-  padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  scrollbar-color: #cbaa00 rgb(0, 0, 0, 0.65);
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
 }
 
 html {
-  background-color: black;
-}
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none;
-}
-
-a {
-  text-decoration: none;
+  scroll-snap-type: y mandatory;
 }

@@ -1,30 +1,34 @@
-import About from "./components/sections/About";
-import Group from "./components/sections/Group";
-import Hero from "./components/sections/Hero";
-import Contact from "./components/sections/Contact";
-import PlaceHolder from "./components/sections/Placeholder";
-import Solo from "./components/sections/Solo";
-import Footer from "./components/sections/Footer";
-import NavBar from "./components/NavBar";
 import styled from "styled-components";
+import Carousel from "./components/Carousel";
+import Hero from "./components/sections/Hero.tsx";
+import Solo from "./components/sections/Solo";
+import SoloArr from "./model/SoloArr";
+import GroupArr from "./model/GroupArr";
+import Group from "./components/sections/Group";
+import { useRef } from "react";
+import useScrollSnap from "react-use-scroll-snap";
+import GoToButton from "./components/GoToButton";
 
 const Wrapper = styled.div`
   margin: 0;
   padding: 0;
+  overflow-y: auto;
 `;
 
 function App() {
-  console.log(window.innerWidth, window.innerHeight);
+  const scrollRef = useRef(null);
+
+  const { goto } = useScrollSnap({ ref: scrollRef, duration: 50 });
   return (
     <Wrapper>
-      <NavBar />
-      <Hero />
-      <About />
-      <Solo />
-      <PlaceHolder />
-      <Group />
-      <Contact />
-      <Footer />
+      <GoToButton goto={goto} />
+      <main ref={scrollRef}>
+        <Hero />
+        <Solo />
+        <Carousel modelArr={SoloArr} />
+        <Group />
+        <Carousel modelArr={GroupArr} />
+      </main>
     </Wrapper>
   );
 }

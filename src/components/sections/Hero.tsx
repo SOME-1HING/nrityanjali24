@@ -2,65 +2,48 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
   width: 100vw;
-  height: 130vh;
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.85) 20%,
-
-      rgba(0, 0, 0, 1) 100%
-    ),
-    url("./backdrop.png");
-  /*   background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.85) 20%,
-      rgba(61, 61, 61, 0.75),
-      rgba(0, 0, 0, 0.85) 60%,
-      rgba(0, 0, 0, 1) 80%,
-      rgba(0, 0, 0, 1) 100%
-    ),
-    url("./backdrop.png"); */
-  background-size: cover;
-  background-position: top left;
-  background-repeat: no-repeat;
+  height: 100vh;
   display: flex;
+  justify-content: start;
+  align-items: start;
+  background-color: #000;
+  background-image: url("./dancer.png");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
 
-  @media (max-device-width: 768px) {
-    width: 200vw;
-    height: 120vh;
-
-    background-size: fill;
-    background-position: left;
-    margin-left: -10rem;
-  }
-
-  @media (max-device-height: 768px) {
-    height: 150vh;
-  }
-
-  @media (max-height: 400px) {
-    height: 160vh;
-  }
+  scroll-snap-align: start;
 `;
 
-const Center = styled.div`
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+const Left = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
 `;
+const Right = styled.div``;
 
-const Logo = styled.img`
-  width: 60vw;
-  height: auto;
+const Logo = styled.div`
+  -webkit-mask-image: url("./logo.png");
+  mask-image: url("./logo.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 
-  @media (max-device-width: 768px) {
-    width: 90vw;
-  }
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ButtonGroup = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 
   @media (max-device-width: 768px) {
@@ -73,6 +56,7 @@ const ButtonWrapper = styled.div<{ $primary?: boolean }>`
   width: 9rem;
   height: 2.5rem;
   padding: 0.1rem 0.1rem;
+  cursor: pointer;
 
   background-image: ${(props) =>
     props.$primary ? "#000" : "linear-gradient(90deg, #cbaa00, #fff)"};
@@ -98,6 +82,7 @@ const Button = styled.button<{ $primary?: boolean }>`
   text-transform: uppercase;
   border-radius: 2rem;
   border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: transparent;
@@ -107,22 +92,25 @@ const Button = styled.button<{ $primary?: boolean }>`
 
 const Hero = () => {
   return (
-    <Wrapper id="home">
-      <Center>
-        <Logo src="./logo.png" />
+    <Wrapper>
+      <Left>
+        <Logo>
+          <video src="./backdrop.mp4" muted loop autoPlay />
+        </Logo>
         <ButtonGroup>
-          <a href="" className="pointer">
+          <a href="" target="_blank">
             <ButtonWrapper $primary={true}>
               <Button $primary={true}>Register</Button>
             </ButtonWrapper>
           </a>
-          <a href="" className="pointer">
+          <a href="" target="_blank">
             <ButtonWrapper>
               <Button>Brochure</Button>
             </ButtonWrapper>
           </a>
         </ButtonGroup>
-      </Center>
+      </Left>
+      <Right />
     </Wrapper>
   );
 };
