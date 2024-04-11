@@ -55,7 +55,7 @@ const Right = styled.div<{ disabled: boolean }>`
 const CardWrapper = styled.div<{ animationDirection: string }>`
   animation: ${({ animationDirection }) =>
       animationDirection === "left" ? slideLeft : slideRight}
-    0.5s ease-in-out;
+    0.5s ease-in-out forwards;
 `;
 
 const Carousel: React.FC<{ modelArr: AccordionModel[] }> = ({ modelArr }) => {
@@ -72,6 +72,7 @@ const Carousel: React.FC<{ modelArr: AccordionModel[] }> = ({ modelArr }) => {
     setAnimationDirection("right");
     setTimeout(() => {
       setIsAnimating(false);
+      setAnimationDirection("");
     }, 500);
   };
 
@@ -84,6 +85,7 @@ const Carousel: React.FC<{ modelArr: AccordionModel[] }> = ({ modelArr }) => {
     setAnimationDirection("left");
     setTimeout(() => {
       setIsAnimating(false);
+      setAnimationDirection("");
     }, 500);
   };
 
