@@ -292,10 +292,8 @@ const Hero = () => {
               <Register>Register</Register>
             </a>
             <a
-              href="./Nrityanjali24_Brochure.pdf"
-              download="Nrityanjali24_Brochure.pdf"
+              href="https://drive.google.com/file/d/14tBLeurYXz_2q0PfSWDYbAIoqMQtQ6oi/view?usp=sharing"
               target="_blank"
-              className="pointer"
             >
               <Brochure>Brochure</Brochure>
             </a>
