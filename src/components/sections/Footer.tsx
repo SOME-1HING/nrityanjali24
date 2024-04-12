@@ -90,6 +90,16 @@ const CopyRight = styled.h4`
   position: absolute;
   bottom: 0px;
 
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   @media (max-device-width: 768px) {
     padding-top: 1rem;
     padding-bottom: 0.5rem;
@@ -203,7 +213,17 @@ const Footer = () => {
             </a>
           </ul>
         </div>
-        <CopyRight>Copyright © 2024 All rights reserved</CopyRight>
+        <CopyRight>
+          Website made by{" "}
+          <a href="https://github.com/SOME-1HING" target="_blank">
+            SOME-1HING
+          </a>{" "}
+          and{" "}
+          <a href="https://www.instagram.com/seen_rishzz/" target="_blank">
+            seen_rishzz
+          </a>{" "}
+          | © 2024 All rights reserved
+        </CopyRight>
       </Wrapper>
     </>
   );
