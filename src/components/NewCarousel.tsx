@@ -32,26 +32,26 @@ const Container = styled.div`
 const NewCarousel: React.FC<{ modelArr: AccordionModel[] }> = ({
   modelArr,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentindex, setcurrentindex] = useState(0);
   const [isClicked, setIsClicked] = useState(false);
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
+    setcurrentindex((prevIndex) =>
       prevIndex === 0 ? modelArr.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
+    setcurrentindex((prevIndex) =>
       prevIndex === modelArr.length - 1 ? 0 : prevIndex + 1
     );
   };
   return (
     <>
       <Wrapper>
-        {currentIndex !== 0 ? (
+        {currentindex !== 0 ? (
           <Container onClick={goToPrevious}>
             <InstaCard
-              model={modelArr[currentIndex - 1]}
+              model={modelArr[currentindex - 1]}
               isClicked={isClicked}
               setIsClicked={setIsClicked}
             />
@@ -60,14 +60,14 @@ const NewCarousel: React.FC<{ modelArr: AccordionModel[] }> = ({
           <Placeholder />
         )}
         <InstaCard
-          model={modelArr[currentIndex]}
+          model={modelArr[currentindex]}
           isClicked={isClicked}
           setIsClicked={setIsClicked}
         />
-        {currentIndex !== modelArr.length - 1 ? (
+        {currentindex !== modelArr.length - 1 ? (
           <Container onClick={goToNext}>
             <InstaCard
-              model={modelArr[currentIndex + 1]}
+              model={modelArr[currentindex + 1]}
               isClicked={isClicked}
               setIsClicked={setIsClicked}
             />

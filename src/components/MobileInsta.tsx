@@ -22,7 +22,7 @@ const Wrapper = styled.section`
   }
 `;
 
-const Image = styled.div<{ src: string; currentIndex: number }>`
+const Image = styled.div<{ src: string; currentindex: number }>`
   position: absolute;
   width: 80vw;
   height: 300px;
@@ -141,49 +141,49 @@ const InfoText = styled.div`
 const MobileInsta: React.FC<{ modelArr: AccordionModel[] }> = ({
   modelArr,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentindex, setcurrentindex] = useState(0);
   useEffect(() => {
-    const imageElement = document.getElementById(modelArr[currentIndex].id);
+    const imageElement = document.getElementById(modelArr[currentindex].id);
     if (imageElement) {
       imageElement.style.animation = "none";
       setTimeout(() => {
         imageElement.style.animation = "slideUp 1s ease-in-out forwards";
       }, 0);
     }
-  }, [currentIndex, modelArr]);
+  }, [currentindex, modelArr]);
   return (
     <Wrapper>
       <Image
-        id={modelArr[currentIndex].id}
-        src={modelArr[currentIndex].imageUrl}
-        currentIndex={currentIndex}
+        id={modelArr[currentindex].id}
+        src={modelArr[currentindex].imageUrl}
+        currentindex={currentindex}
       />
       <Container>
         <Content>
-          <Title>{modelArr[currentIndex].title}</Title>
-          <SubTitle>{modelArr[currentIndex].subtitle}</SubTitle>
+          <Title>{modelArr[currentindex].title}</Title>
+          <SubTitle>{modelArr[currentindex].subtitle}</SubTitle>
           <Info>
-            {modelArr[currentIndex].limit === "1" ? (
+            {modelArr[currentindex].limit === "1" ? (
               <IoPersonSharp fill="rgba(192, 191, 196, 0.6)" size={30} />
-            ) : modelArr[currentIndex].limit === "2" ? (
+            ) : modelArr[currentindex].limit === "2" ? (
               <IoPeopleSharp fill="rgba(192, 191, 196, 0.6)" size={30} />
             ) : (
               <MdGroups fill="rgba(192, 191, 196, 0.6)" size={30} />
             )}
-            <InfoText>{modelArr[currentIndex].limit}</InfoText>
+            <InfoText>{modelArr[currentindex].limit}</InfoText>
           </Info>
         </Content>
       </Container>
       <ArrowWrapper>
-        {currentIndex !== 0 ? (
-          <Left onClick={() => setCurrentIndex(currentIndex - 1)}>
+        {currentindex !== 0 ? (
+          <Left onClick={() => setcurrentindex(currentindex - 1)}>
             <Arrow />
           </Left>
         ) : (
           <Placeholder />
         )}
-        {currentIndex !== modelArr.length - 1 ? (
-          <Right onClick={() => setCurrentIndex(currentIndex + 1)}>
+        {currentindex !== modelArr.length - 1 ? (
+          <Right onClick={() => setcurrentindex(currentindex + 1)}>
             <Arrow />
           </Right>
         ) : (

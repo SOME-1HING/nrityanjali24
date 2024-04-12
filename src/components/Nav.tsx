@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { IoMdHome } from "react-icons/io";
 import styled from "styled-components";
 
-const Container = styled.div<{ scrolled: boolean }>`
+const Container = styled.div<{ scrolled: string }>`
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -15,7 +15,7 @@ const Container = styled.div<{ scrolled: boolean }>`
   background: #9d02fc;
   cursor: pointer;
 
-  display: ${(props) => (props.scrolled ? "flex" : "none")};
+  display: ${(props) => (props.scrolled === "true" ? "flex" : "none")};
 
   &:hover {
     background: #dbd5f6;
@@ -23,12 +23,12 @@ const Container = styled.div<{ scrolled: boolean }>`
 `;
 
 const Nav = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState("false");
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
+      setScrolled(window.scrollY > 0 ? "true" : "false");
     };
 
     window.addEventListener("scroll", handleScroll);
