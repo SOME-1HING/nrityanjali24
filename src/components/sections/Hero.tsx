@@ -145,16 +145,14 @@ const Title2 = styled.h1`
 
 const Dancer = styled.img`
   position: absolute;
-  width: 35rem;
-  height: 35rem;
+  height: 25rem;
   bottom: 2rem;
   object-fit: contain;
   object-position: center;
-  z-index: 5;
+  z-index: 3;
 
-  @media screen and (min-width: 1500px) {
-    width: 40rem;
-    height: 40rem;
+  @media screen and (min-width: 1320px) {
+    height: 35rem;
   }
 `;
 

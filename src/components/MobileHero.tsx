@@ -131,7 +131,7 @@ const Dancer = styled.img`
   height: 25rem;
   object-fit: contain;
   object-position: center;
-  z-index: 5;
+  z-index: 3;
 
   @media screen and (max-height: 800px) {
     width: 15rem;

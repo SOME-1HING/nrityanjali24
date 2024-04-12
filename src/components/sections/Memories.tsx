@@ -61,7 +61,7 @@ const Memories = () => {
   return (
     <>
       <Wrapper>
-        <Title>Last Year</Title>
+        <Title>Past Events</Title>
         <ReelWrapper>
           <Banner images={MemoriesArr} direction="left" />
           <Banner images={MemoriesArr} direction="right" />
