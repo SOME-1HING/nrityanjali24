@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 
   display: none;
   justify-content: center;
@@ -112,6 +112,11 @@ const Title1 = styled.h1`
   font-weight: 400;
   line-height: normal;
   height: 4rem;
+
+  @media screen and (max-width: 380px) {
+    font-size: 2rem;
+    height: 2rem;
+  }
 `;
 
 const Title2 = styled.h1`
@@ -124,6 +129,11 @@ const Title2 = styled.h1`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  @media screen and (max-width: 380px) {
+    font-size: 2rem;
+    height: 2rem;
+  }
 `;
 
 const Dancer = styled.img`
@@ -135,7 +145,7 @@ const Dancer = styled.img`
 
   @media screen and (max-height: 800px) {
     width: 15rem;
-    height: 100%;
+    height: 15rem;
   }
 `;
 
@@ -175,12 +185,12 @@ const TopButtonWrapper = styled.div`
 const Register = styled.div`
   width: 10rem;
   height: 3rem;
+  font-size: 28px;
   flex-shrink: 0;
   border-radius: 116px;
   background: #4f1f7f;
   color: #fff;
   font-family: Oswald;
-  font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -194,6 +204,12 @@ const Register = styled.div`
     cursor: pointer;
     background: #fff;
     color: #4f1f7f;
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 8rem;
+    height: 3rem;
+    font-size: 24px;
   }
 `;
 
@@ -219,6 +235,12 @@ const Brochure = styled.div`
     cursor: pointer;
     background: #4f1f7f;
     color: #fff;
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 8rem;
+    height: 3rem;
+    font-size: 24px;
   }
 `;
 
@@ -251,15 +273,29 @@ const UploadWrapper = styled.div`
     height: 5rem;
     font-size: 36px;
   }
+
+  @media screen and (max-width: 420px) {
+    width: 16rem;
+    height: 5rem;
+    font-size: 28px;
+    gap: 0.5rem;
+  }
 `;
 const UploadImage = styled.img`
   margin-left: 1rem;
   width: 80px;
   height: 80px;
+  border-radius: 50%;
 
   @media screen and (max-height: 800px) {
     width: 60px;
     height: 60px;
+  }
+
+  @media screen and (max-width: 420px) {
+    margin-left: 0.2rem;
+    width: 70px;
+    height: 70px;
   }
 `;
 
