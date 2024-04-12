@@ -7,7 +7,8 @@ const Wrapper = styled.section`
   height: 100%;
   display: none;
   flex-direction: column;
-  background: linear-gradient(292deg, #dbd5f6 17.96%, #530d7d 127.02%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(211deg, #b24afa 47%, rgba(0, 212, 255, 1) 84%);
   justify-content: space-between;
   align-items: center;
   padding-bottom: 4rem;
