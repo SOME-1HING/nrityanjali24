@@ -4,6 +4,7 @@ interface AccordionModel {
   subtitle: string;
   limit: string;
   extraSpace: boolean;
+  id: string;
 }
 
 export default AccordionModel;

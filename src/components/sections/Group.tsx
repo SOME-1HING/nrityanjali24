@@ -9,6 +9,9 @@ const Wrapper = styled.section`
   align-items: center;
   scroll-snap-align: start;
   position: relative;
+  @media screen and (max-width: 768px) {
+    height: 50vh;
+  }
 
   video,
   h1 {
@@ -25,14 +28,19 @@ const Wrapper = styled.section`
   }
 
   h1 {
-    font-size: 20vw;
+    font-size: 25vw;
     font-family: sans-serif;
-    font-weight: 700;
+    font-weight: 1000;
     line-height: 100vh;
     text-transform: uppercase;
     text-align: center;
     background: #ffffff;
     mix-blend-mode: screen;
+
+    @media screen and (max-width: 768px) {
+      font-size: 25vw;
+      line-height: 50vh;
+    }
   }
 `;
 

@@ -22,6 +22,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const JoinUs = styled.div`
@@ -33,6 +34,18 @@ const JoinUs = styled.div`
   line-height: normal;
   letter-spacing: 17.838px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    font-size: 6rem;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    text-align: center;
+  }
 `;
 
 const Join = () => {

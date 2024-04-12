@@ -3,6 +3,20 @@ import styled from "styled-components";
 const Separator = styled.div`
   height: 20vh;
   background: linear-gradient(to bottom, #9d02fc 20%, rgba(0, 0, 0, 1) 100%);
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const Map = styled.iframe`
+  width: 100vw;
+  border: 0;
+  height: 300px;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
 `;
 
 const Wrapper = styled.section`
@@ -63,6 +77,7 @@ const ListItem = styled.li`
 
   @media (max-device-width: 768px) {
     text-align: center;
+    list-style: none;
   }
 `;
 
@@ -84,6 +99,13 @@ const Footer = () => {
   return (
     <>
       <Separator />
+      <Map
+        className="map"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d497491.18658782134!2d77.642963!3d13.057943!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17578c79da7d%3A0xe96dcd8e2b982f8e!2sKristu%20Jayanti%20College%2C%20Autonomous!5e0!3m2!1sen!2sus!4v1712322172195!5m2!1sen!2sus"
+        allowFullScreen={false}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></Map>
       <Wrapper>
         <Links>
           <Title>Links</Title>
@@ -97,11 +119,11 @@ const Footer = () => {
             <a className="pointer" href="#solo">
               <ListItem>Solo Events</ListItem>
             </a>
-            <a className="pointer" href="#info">
-              <ListItem>info</ListItem>
-            </a>
             <a className="pointer" href="#group">
               <ListItem>group events</ListItem>
+            </a>
+            <a className="pointer" href="#info">
+              <ListItem>info</ListItem>
             </a>
             <a className="pointer" href="#contact">
               <ListItem>contact</ListItem>
@@ -168,12 +190,15 @@ const Footer = () => {
         <div className="contact footer-common">
           <Title>Contact</Title>
           <ul>
-            <a className="pointer" href="tel:	080-28465611">
-              <ListItem>080-28465611</ListItem>
+            <a className="pointer" href="tel:	080-68737777">
+              <ListItem>(080) 68737777</ListItem>
             </a>
-            <a className="pointer" href="mailto:_____@kristujayanti.com">
-              <ListItem className="e-mail-link">
-                ____@kristujayanti.com
+            <a className="pointer" href="mailto:info@kristujayanti.com">
+              <ListItem
+                className="e-mail-link"
+                style={{ textTransform: "none" }}
+              >
+                info@kristujayanti.com
               </ListItem>
             </a>
           </ul>

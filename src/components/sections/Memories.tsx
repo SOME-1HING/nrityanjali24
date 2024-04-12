@@ -11,6 +11,10 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Title = styled.h1`
@@ -22,6 +26,10 @@ const Title = styled.h1`
   text-align: center;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 const ReelWrapper = styled.div`
@@ -34,15 +42,39 @@ const ReelWrapper = styled.div`
   gap: 1rem;
 `;
 
+const MobileWrapper = styled.section`
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+`;
+
 const Memories = () => {
   return (
-    <Wrapper>
-      <Title>Last Year</Title>
-      <ReelWrapper>
-        <Banner images={MemoriesArr} direction="left" />
-        <Banner images={MemoriesArr} direction="right" />
-      </ReelWrapper>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Title>Last Year</Title>
+        <ReelWrapper>
+          <Banner images={MemoriesArr} direction="left" />
+          <Banner images={MemoriesArr} direction="right" />
+        </ReelWrapper>
+      </Wrapper>
+      <MobileWrapper>
+        <ReelWrapper>
+          <Banner images={MemoriesArr} direction="left" />
+          <Title>Last Year</Title>
+          <Banner images={MemoriesArr} direction="right" />
+        </ReelWrapper>
+      </MobileWrapper>
+    </>
   );
 };
 

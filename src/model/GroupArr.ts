@@ -4,14 +4,16 @@ const GroupArr: AccordionModel[] = [
   {
     title: "Taal Tarang",
     subtitle: "Eastern group dance",
-    imageUrl: "./group/angika.jpeg",
+    imageUrl: "./group/taaltarang.jpeg",
     limit: "5-15",
     extraSpace: false,
+    id: "342878367",
   },
   {
     title: "Dhol Khol",
     subtitle: "Folk/Tribal dance",
-    imageUrl: "./group/footloose.jpg",
+    imageUrl: "./group/dholkhol.jpg",
+    id: "342878433",
 
     limit: "8-10",
     extraSpace: true,
@@ -19,7 +21,8 @@ const GroupArr: AccordionModel[] = [
   {
     title: "Rang Manch",
     subtitle: "Theme dance",
-    imageUrl: "./group/angika.jpeg",
+    imageUrl: "./group/rangmanch.jpg",
+    id: "2342542353",
 
     limit: "8-10",
     extraSpace: false,
@@ -27,7 +30,8 @@ const GroupArr: AccordionModel[] = [
   {
     title: "Yugal Lasya",
     subtitle: "Duet dance",
-    imageUrl: "./group/footloose.jpg",
+    imageUrl: "./group/yugallasya.jpg",
+    id: "32425543",
 
     limit: "2",
     extraSpace: false,
@@ -35,7 +39,8 @@ const GroupArr: AccordionModel[] = [
   {
     title: "Groove Clash",
     subtitle: "Western group dance",
-    imageUrl: "./group/angika.jpeg",
+    imageUrl: "./group/grooveclash.jpg",
+    id: "2342544532",
 
     limit: "5-15",
     extraSpace: true,

@@ -1,12 +1,17 @@
 import styled from "styled-components";
-
 const Wrapper = styled.section`
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: #000;
-  gap: 10rem;
+  z-index: 1;
+  @media (max-device-width: 768px) {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 4rem;
+  }
 `;
 
 const Container = styled.div`
@@ -16,6 +21,13 @@ const Container = styled.div`
   margin-left: 5rem;
   margin-right: 5rem;
   gap: 2rem;
+
+  @media (max-device-width: 768px) {
+    width: 90vw;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 `;
 
 const Header = styled.div`
@@ -30,36 +42,65 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  @media (max-device-width: 768px) {
+    text-align: center;
+    width: 100vw;
+  }
 `;
 
 const TitleAbout = styled.div`
-  -webkit-text-stroke-width: 2.2px;
-  -webkit-text-stroke-color: #cbaa00;
-  font-family: "Oswald";
+  color: #f586ff;
+  font-family: Samarkan;
   font-size: 75.865px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: 12.897px;
+  letter-spacing: 3.793px;
   text-transform: uppercase;
+
+  @media (max-device-width: 768px) {
+    font-size: 48px;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 12.897px;
+    text-align: center;
+  }
 `;
 
 const TitleUs = styled.div`
-  color: #cbaa00;
-  font-family: "Oswald";
+  color: #fff;
+  font-family: Scheherazade;
   font-size: 75.865px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: 12.897px;
+  letter-spacing: 3.793px;
   text-transform: uppercase;
+
+  @media (max-device-width: 768px) {
+    font-size: 48px;
+    letter-spacing: 12.897px;
+    text-align: center;
+  }
+`;
+
+const TitleLineWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 `;
 
 const TitleLine = styled.div`
-  width: 40vw;
+  width: 50vw;
   height: 2px;
   background-color: #fff;
   border-radius: 10px;
+
+  @media (max-device-width: 768px) {
+    display: none;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -72,20 +113,28 @@ const ContentWrapper = styled.div`
 const ContentLine = styled.div`
   height: 40vh;
   width: 10px;
-  background-color: #cbaa00;
+  background-color: #f586ff;
   border-radius: 10px;
   border: 1.5px solid #fff;
+
+  @media (max-device-width: 768px) {
+    display: none;
+  }
 `;
 
 const Content = styled.div`
   width: 100%;
   color: #fff;
-  font-family: "Imprima", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-align: justify;
   font-size: 27.972px;
   line-height: normal;
+
+  @media (max-device-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const About = () => {
@@ -97,7 +146,11 @@ const About = () => {
             <TitleAbout>About</TitleAbout>
             <TitleUs>Us</TitleUs>
           </Title>
-          <TitleLine />
+          <TitleLineWrapper>
+            <TitleLine />
+            <TitleLine />
+            <TitleLine />
+          </TitleLineWrapper>
         </Header>
         <ContentWrapper>
           <ContentLine />

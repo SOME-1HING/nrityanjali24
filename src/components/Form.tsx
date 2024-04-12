@@ -1,3 +1,4 @@
+import { useForm } from "@formspree/react";
 import { IoIosSend } from "react-icons/io";
 import styled from "styled-components";
 
@@ -88,10 +89,15 @@ const Button = styled.button`
   }
 `;
 
-const Form = () => {
+const Form: React.FC = (): JSX.Element => {
+  const [state, handleSubmit] = useForm("mvoevvjp");
+  if (state.succeeded) {
+    alert("Success");
+  }
+
   return (
     <Wrapper>
-      <form name="contact" method="POST" action="">
+      <form onSubmit={handleSubmit} style={{ display: "block !important" }}>
         <NameEmailContainer>
           <InputBox
             type="text"
@@ -114,6 +120,7 @@ const Form = () => {
           className="pointer"
           required={true}
           placeholder="Subject"
+          name="subject"
         />
         <TextArea
           className="pointer"
@@ -122,6 +129,7 @@ const Form = () => {
           data-lt-tmp-id="lt-945523"
           spellCheck={false}
           data-gramm={false}
+          name="message"
         ></TextArea>
         <ButtonWrapper>
           <Button id="submit" type="submit" value="" className="pointer">

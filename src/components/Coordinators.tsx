@@ -16,6 +16,10 @@ const Wrapper = styled.div`
   -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+
+  @media screen and (max-width: 1200px) {
+    height: 400px;
+  }
 `;
 const Container = styled.div`
   width: 100%;
@@ -40,6 +44,21 @@ const SubContent = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 1rem;
+    gap: 8px;
+  }
+  p {
+    @media screen and (max-width: 1200px) {
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+  }
 `;
 
 const Line = styled.div`
@@ -70,11 +89,11 @@ const Coordinators = () => {
         <Content>
           <SubContent>
             <p>Mr. Ajay Krishna: 9353173583</p>
-            <p>Ms. Achsah Varghese: 8431539784</p>
+            <p>Mr. Nathanael S: 9482020776</p>
           </SubContent>
           <Line />
           <SubContent>
-            <p>Mr. Nathanael S: 9482020776</p>
+            <p>Ms. Achsah Varghese: 8431539784</p>
             <p>Ms. Navya Varrier: 7306326882</p>
           </SubContent>
         </Content>

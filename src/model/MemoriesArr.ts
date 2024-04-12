@@ -1,12 +1,9 @@
 const MemoriesArr: string[] = [
-  "./memories/memories1.jpg",
-  "./memories/memories2.jpg",
-  "./memories/memories3.jpg",
-  "./memories/memories4.jpg",
-  "./memories/memories5.jpg",
-  "./memories/memories6.jpg",
-  "./memories/memories7.jpg",
-  "./memories/memories8.jpg",
+  "./memories/1.jpg",
+  "./memories/2.jpg",
+  "./memories/3.jpg",
+  "./memories/4.jpg",
+  "./memories/5.jpg",
 ];
 
 export default MemoriesArr;
