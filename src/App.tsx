@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import Carousel from "./components/Carousel";
+import { Analytics } from "@vercel/analytics/react";
 import Hero from "./components/sections/Hero.tsx";
 import Solo from "./components/sections/Solo";
 import SoloArr from "./model/SoloArr";
@@ -49,6 +49,7 @@ function App() {
     <Wrapper>
       {isDesktop && <GoToButton goto={goto} />}
       <Nav />
+      <Analytics />
       <main ref={isDesktop ? scrollRef : null}>
         <Hero />
         <About />
