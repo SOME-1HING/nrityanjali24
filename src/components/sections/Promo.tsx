@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import MobilePromo from "../MobilePromo";
+import { Suspense } from "react";
 
 const PromoWrapper = styled.div`
   display: flex;
@@ -32,12 +33,14 @@ const Promo = () => {
     <>
       <PromoWrapper>
         <PromoBorder>
-          <PromoVideo
-            width="100%"
-            height="100%"
-            controls
-            src="./backdrop.mp4"
-          />
+          <Suspense fallback={<div>Video is loading please wait...</div>}>
+            <PromoVideo
+              width="100%"
+              height="100%"
+              controls
+              src="./backdrop.mp4"
+            />
+          </Suspense>
         </PromoBorder>
       </PromoWrapper>
       <MobilePromo />

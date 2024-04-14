@@ -243,7 +243,7 @@ const Brochure = styled.div`
     font-size: 24px;
   }
 `;
-
+/* 
 const UploadWrapper = styled.div`
   display: flex;
   justify-content: start;
@@ -297,7 +297,7 @@ const UploadImage = styled.img`
     width: 70px;
     height: 70px;
   }
-`;
+`; */
 
 const MobileHero = () => {
   return (
@@ -333,10 +333,10 @@ const MobileHero = () => {
             href="https://portal.kristujayanti.edu.in/register-nrityanjali-2024"
             target="_blank"
           >
-            <UploadWrapper>
+            {/* <UploadWrapper>
               <UploadImage src="./upload.png" />
               Submit Audio
-            </UploadWrapper>
+            </UploadWrapper> */}
           </a>
         </ButtonsWrapper>
       </Container>

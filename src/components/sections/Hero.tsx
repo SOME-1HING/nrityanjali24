@@ -234,35 +234,35 @@ const Brochure = styled.div`
   }
 `;
 
-const UploadWrapper = styled.div`
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  background-color: #fff;
-  width: 24rem;
-  height: 6rem;
-  border-radius: 59px;
-  color: #000;
-  font-family: Oswald;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40.881px;
-  letter-spacing: -0.227px;
-  gap: 1rem;
-  z-index: 9;
+// const UploadWrapper = styled.div`
+//   display: flex;
+//   justify-content: start;
+//   align-items: center;
+//   background-color: #fff;
+//   width: 24rem;
+//   height: 6rem;
+//   border-radius: 59px;
+//   color: #000;
+//   font-family: Oswald;
+//   font-size: 48px;
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 40.881px;
+//   letter-spacing: -0.227px;
+//   gap: 1rem;
+//   z-index: 9;
 
-  &:hover {
-    cursor: pointer;
-    background: #4f1f7f;
-    color: #fff;
-  }
-`;
-const UploadImage = styled.img`
-  margin-left: 1rem;
-  width: 80px;
-  height: 80px;
-`;
+//   &:hover {
+//     cursor: pointer;
+//     background: #4f1f7f;
+//     color: #fff;
+//   }
+// `;
+// const UploadImage = styled.img`
+//   margin-left: 1rem;
+//   width: 80px;
+//   height: 80px;
+// `;
 
 const Hero = () => {
   return (
@@ -302,10 +302,10 @@ const Hero = () => {
             href="https://portal.kristujayanti.edu.in/register-nrityanjali-2024"
             target="_blank"
           >
-            <UploadWrapper>
+            {/* <UploadWrapper>
               <UploadImage src="./upload.png" />
               Submit Audio
-            </UploadWrapper>
+            </UploadWrapper> */}
           </a>
         </ButtonsWrapper>
       </Wrapper>

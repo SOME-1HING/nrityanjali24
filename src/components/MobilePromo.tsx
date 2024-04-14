@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import styled from "styled-components";
 
 const PromoWrapper = styled.div`
@@ -20,14 +21,15 @@ const PromoWrapper = styled.div`
 const MobilePromo = () => {
   return (
     <PromoWrapper>
-      <video
-        width="100%"
-        height="100%"
-        autoPlay
-        controls
-        loop
-        src="./backdrop.mp4"
-      />
+      <Suspense fallback={<div>Video is loading please wait...</div>}>
+        <video
+          width="100%"
+          height="100%"
+          autoPlay
+          controls
+          src="./backdrop.mp4"
+        />
+      </Suspense>
     </PromoWrapper>
   );
 };
